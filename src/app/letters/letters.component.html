@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="columns is-centered">
+        <div class="box column is-one-third">
+            <h1 class="title has-text-centered">Typing Challenge</h1>
+            <ng-container *ngFor="let l of letters; index as i">
+                    <span [ngStyle]="{
+                        'color': sameLength(i) && l.correct ? 'green' : 
+                        sameLength(i) && !l.correct ? 'red' : 
+                        'black',
+                        'font-size': '24px'
+                    }">{{l.letter}}</span>
+            </ng-container>
+            <div class="">
+                <input class="input" (input)="handleCheckUserInput($event.target.value)" type="text">
+            </div>
+        </div>
+    </div>
+</div>
+

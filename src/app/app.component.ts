@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'typing-challenge';
+
+  word = "I love pie"
 }
